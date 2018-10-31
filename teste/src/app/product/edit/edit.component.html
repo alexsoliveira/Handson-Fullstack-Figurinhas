@@ -1,0 +1,21 @@
+<h3>edit Product</h3>
+<div *ngIf="colecionador">
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Senha</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let colecionador of colecionadores">
+            <td>{{colecionador.Id}}</td>
+            <td>{{colecionador.Nome}}</td>
+            <td>{{colecionador.Email}}</td>
+            <td>{{colecionador.Senha}}</td>
+            <td>
+                Edit |
+                <button type="button" (click)="delete(colecionador.Id)">Delete</button> 
+        </tr>
+    </table>
+</div>
